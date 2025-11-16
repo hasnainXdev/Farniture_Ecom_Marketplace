@@ -4,10 +4,10 @@ import React from "react";
 import { useCartStore } from "@/store/cartStore";
 import { Products } from "@/sanity.types";
 import { ShoppingCart, Trash2 } from "lucide-react";
-// import { useToast } from "@/components/ui/use-toast"; // shadcn's toast hook
+import { Toast } from "./ui/toast";
 
 interface AddToCartButtonProps {
-  product: Products; // Product type based on your Sanity schema
+  product: Products;
   className?: string; // Optional additional classes for styling
 }
 
@@ -34,10 +34,9 @@ const AddToCartButton: React.FC<AddToCartButtonProps> = ({
 
   const handleRemoveFromCart = () => {
     removeItem(product._id);
-    toast({
+    Toast({
       title: "Removed from Cart",
-      description: `${product.title} has been removed from your cart.`,
-      variant: "info",
+      variant: "default",
     });
   };
 
