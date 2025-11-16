@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-//@ts-expect-error
+//@ts-expect-error Global CSS import in server component
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/FooterSection";
