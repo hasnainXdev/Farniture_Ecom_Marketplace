@@ -50,9 +50,7 @@ const sidebarItems = [
   },
 ]
 
-interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export function Sidebar({ className }: SidebarProps) {
+export function Sidebar({ className }: { className?: string }) {
   const pathname = usePathname()
   const [isCollapsed, setIsCollapsed] = useState(false)
 

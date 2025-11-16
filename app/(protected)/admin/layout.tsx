@@ -24,7 +24,7 @@ export default function AdminLayout({
         setIsAdmin(true);
       }
     }
-  }, [user, isLoaded]);
+  }, [user, isLoaded, router]);
 
   if (!isLoaded) return <Loader/>;
 
